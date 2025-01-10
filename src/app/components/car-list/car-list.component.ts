@@ -23,9 +23,12 @@ ngOnInit(): void {
   }
 }
 onSaveCar() {
+  console.log(this.carObj.carId)
   debugger;
+  
   if(this.carObj.carId == 0) {
     this.carObj.carId =   this.carList.length  + 1;
+    console.log(this.carObj.carId =   this.carList.length  + 1)
     this.carList.unshift(this.carObj);
     localStorage.setItem(this.localKeyName,JSON.stringify(this.carList));
     this.onReset();
